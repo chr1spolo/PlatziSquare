@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PlatziSquare';
   listo = false;
+  nombre: string;
+  edad: number;
 
   constructor () {
     setTimeout( () => {
