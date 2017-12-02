@@ -9,9 +9,13 @@ export class AppComponent {
   title = 'PlatziSquare';
   listo = false;
 
-  constructor() {
+  constructor () {
     setTimeout( () => {
       this.listo = true;
     }, 3000);
+  }
+
+  hacerAlgo () {
+    alert('Haciendo Algo');
   }
 }
