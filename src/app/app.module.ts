@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { ResaltDirective } from './directives/resalt.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltDirective
   ],
   imports: [
     BrowserModule,
