@@ -14,3 +14,11 @@
     <li *ngIf="place.active"> {{ place.nombre }} </li>
   </ng-container>
 </ul>
+
+<ul>
+  <ng-container *ngFor="let place of places; let i = index">
+    <li
+    [ngStyle]="{color: (place.active) ? 'black' : 'gray'}"
+    [ngClass]="{numero_par: (i + 1) % 2 !== 0}"> {{ place.nombre }} </li>
+  </ng-container>
+</ul>
