@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { ResaltDirective } from './directives/resalt.directive';
+import { AppCountClicksDirective } from './directives/count-clicks.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResaltDirective
+    ResaltDirective,
+    AppCountClicksDirective
   ],
   imports: [
     BrowserModule,
