@@ -13,6 +13,8 @@ export class AppComponent {
     {active: false, nombre: 'Drogas la rebaja'},
     {active: true, nombre: 'Tienda el rebajón'}
   ];
+  lat = 4.6560663;
+  lng = -74.0595918;
 
   constructor () {
     setTimeout( () => {
