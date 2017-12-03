@@ -1,4 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ul>
-  <li *ngFor="let place of places"> {{ place.nombre }} </li>
+  <ng-container *ngFor="let place of places">
+    <li *ngIf="place.active"> {{ place.nombre }} </li>
+  </ng-container>
 </ul>
