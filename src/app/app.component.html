@@ -16,14 +16,14 @@
 
       </ul>
     </div>
-  </nav>
-
-<agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
+</nav>
 
 <hr style="border: .5px solid #ccc;">
 
-<div class="container">
+<div *ngIf="router.url !== '/index'" class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="router.url === '/index'">
   <router-outlet></router-outlet>
 </div>

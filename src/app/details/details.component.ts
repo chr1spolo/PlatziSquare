@@ -10,5 +10,7 @@ export class AppDetailsComponent {
 
   constructor(private router: ActivatedRoute) {
     console.log(this.router.snapshot.params['id']);
+    console.log(this.router.snapshot.queryParams['action']);
+    console.log(this.router.snapshot.queryParams['referer']);
   }
 }

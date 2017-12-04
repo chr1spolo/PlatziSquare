@@ -13,6 +13,9 @@ export class AppPlacesComponent {
     {id: 4, plan: 'paid', nearBy: 6, distance: 30, active: true, nombre: 'Tienda el rebajón'}
   ];
 
+  lat = 4.6560663;
+  lng = -74.0595918;
+
   constructor () {
     setTimeout( () => {
 
