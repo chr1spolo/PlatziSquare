@@ -10,6 +10,8 @@ import { AppCountClicksDirective } from './directives/count-clicks.directive';
 
 import { AppDetailsComponent } from './details/details.component';
 import { AppPlacesComponent } from './places/places.component';
+import { AppContactComponent } from './contact/contact.component';
+
 
 import { Routing } from './app.routing';
 
@@ -19,7 +21,8 @@ import { Routing } from './app.routing';
     ResaltDirective,
     AppCountClicksDirective,
     AppDetailsComponent,
-    AppPlacesComponent
+    AppPlacesComponent,
+    AppContactComponent
   ],
   imports: [
     BrowserModule,

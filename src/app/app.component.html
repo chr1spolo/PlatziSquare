@@ -11,19 +11,14 @@
           <a class="nav-link" routerLink="/index">Inicio </a>
         </li>
         <li routerLinkActive="active">
-          <a class="nav-link" routerLink="/details/1">Detalle</a>
+          <a class="nav-link" routerLink="/contact">Contacto</a>
         </li>
 
       </ul>
     </div>
 </nav>
 
-<hr style="border: .5px solid #ccc;">
 
-<div *ngIf="router.url !== '/index'" class="container">
-  <router-outlet></router-outlet>
-</div>
-
-<div *ngIf="router.url === '/index'">
+<div>
   <router-outlet></router-outlet>
 </div>

@@ -1,1 +1,19 @@
-<h2>Detalle</h2>
+<div class="container">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/">Lugares</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ place.nombre }} </li>
+  </ol>
+  <h2> {{ place.nombre }} </h2>
+  <hr />
+  <small>{{ place.distance }} Km</small>
+  <br>
+  <div class="card card-body bg-light">
+
+    <p>
+      {{ place.description }}
+    </p>
+    <b>Suscripcion {{ capitalizeFirstLetter(place.plan) }}</b>
+
+  </div>
+</div>
