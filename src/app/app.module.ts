@@ -12,6 +12,18 @@ import { AppDetailsComponent } from './details/details.component';
 import { AppPlacesComponent } from './places/places.component';
 import { AppContactComponent } from './contact/contact.component';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyC411xhHdhxdnbnig4yErTMUXYUURxiGns",
+  authDomain: "platzisquare-1512328271566.firebaseapp.com",
+  databaseURL: "https://platzisquare-1512328271566.firebaseio.com",
+  storageBucket: "platzisquare-1512328271566.appspot.com",
+  messagingSenderId: "909781924049"
+};
+
 
 import { Routing } from './app.routing';
 
@@ -30,7 +42,10 @@ import { Routing } from './app.routing';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAF5xDGPJPm5VHTvnt3YiKDOWQQXXF1Cu8'
     }),
-    Routing
+    Routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

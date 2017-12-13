@@ -8,5 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'PlatziSquare';
-  constructor (private router: Router) {}
+  constructor (private router: Router) {
+    console.clear();
+  }
 }

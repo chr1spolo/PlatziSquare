@@ -1,0 +1,43 @@
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<hr/>
+<div class="container">
+
+    <div class="row">
+        <div class="col-8">
+
+          <div class="card">
+              <h2 class="card-header">
+                  Lugares Cercanos
+              </h2>
+              <ul class="list-group list-group-flush">
+                  <ng-container
+                  *ngFor="let place of places; let i = index"
+                  [ngSwitch]="place.nearBy">
+                    <a
+                    [routerLink]="['/details', place.id]"
+                    [queryParams]="{action: 'view', referer: 'google'}">
+
+                        <li class="list-group-item"
+                          [ngStyle]="{color: (place.active) ? 'black' : 'gray'}">
+                            {{ place.nombre }} -
+                            <span *ngSwitchCase="1" [ngStyle]="{color: 'green'}"> Muy cercano </span>
+                            <span *ngSwitchCase="2" [ngStyle]="{color: 'skyblue'}"> Cercano </span>
+                            <span *ngSwitchCase="6" [ngStyle]="{color: 'red'}"> Lejano </span>
+                          </li>
+
+                    </a>
+                  </ng-container>
+              </ul>
+            </div>
+
+        </div>
+        <div class="col-2">
+            <h2 class="title">
+              Destacados
+            </h2>
+        </div>
+    </div>
+
+</div>
