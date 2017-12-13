@@ -1,0 +1,70 @@
+<div class="body-contact">
+    <div class="container">
+    
+        <div class="spacer"></div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <span class="card-img"></span>
+                    <div class="card-img-overlay">
+                        <h4 class="card-title"> Crear lugar </h4>
+                        <hr style="border-color: rgba(255, 255, 255, 0.616); width: 80%; margin: 3% 0;" />
+                        <p class="card-text">
+                            Digita la información para guardar el lugar.
+                        </p>
+                    </div>
+                    <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1"> Nombre del lugar </label>
+                                    <input  type="text" 
+                                            class="form-control form-control-sm" 
+                                            placeholder="Floristeria etc"
+                                            name="name_place"
+                                            [(ngModel)]="place.name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1"> Distancia </label>
+                                    <input  type="number" 
+                                            class="form-control form-control-sm" 
+                                            placeholder="-14265"
+                                            name="distance"
+                                            [(ngModel)]="place.distance">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1"> Cercanía </label>
+                                    <input  type="number" 
+                                            class="form-control form-control-sm" 
+                                            placeholder="-12265"
+                                            name="nearBy"
+                                            [(ngModel)]="place.nearBy">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Plan</label>
+                                    <select class="form-control" name="plan" [(ngModel)]="place.plan">
+                                        <option value=""> Elegir uno </option>
+                                        <option value="free">Gratis</option>
+                                        <option value="paid">Pago</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label> Descripción </label>
+                                    <textarea class="form-control" [(ngModel)]="place.description" name="description" rows="3"></textarea>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <button class="btn pointer btn-danger float-left">Cancelar</button>
+                                    <button class="btn pointer btn-primary float-right" (click)="savePlace()">Guardar</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="text-align:center;">
+                <i class="material-icons d-inline-block align-top" style="font-size: 230px; color: #fff">spa</i>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>

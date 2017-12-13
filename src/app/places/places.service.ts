@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Injectable()
 export class AppPlacesService {
-    constructor() { }
+    constructor(private afDB: AngularFireDatabase) { }
 
     places: any = [
         {
@@ -47,5 +48,10 @@ export class AppPlacesService {
 
     public getPlace(id) {
         return this.places.find( (place) => { return place.id == id }) || null;
+    }
+
+    public savePlace(object) {
+      console.log(object);
+      console.log(this.afDB.database.ref('places/1').set(object));
     }
 }

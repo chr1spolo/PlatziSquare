@@ -8,9 +8,13 @@
         <div class="col-8">
 
           <div class="card">
-              <h2 class="card-header">
-                  Lugares Cercanos
-              </h2>
+              <div class="card-header clearfix">
+                  
+                  <h2 class="card-title float-left">
+                        Lugares Cercanos
+                  </h2>
+                  <a [routerLink]='["/create"]' class="btn btn-primary float-right"> Crear lugar </a>
+              </div>
               <ul class="list-group list-group-flush">
                   <ng-container
                   *ngFor="let place of places; let i = index"

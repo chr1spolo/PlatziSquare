@@ -10,6 +10,7 @@ import { AppCountClicksDirective } from './directives/count-clicks.directive';
 
 import { AppDetailsComponent } from './details/details.component';
 import { AppPlacesComponent } from './places/places.component';
+import { AppPlacesCreateComponent } from './places/create-place/create-places.component';
 import { AppContactComponent } from './contact/contact.component';
 
 import { AngularFireModule } from 'angularfire2';
@@ -34,7 +35,8 @@ import { Routing } from './app.routing';
     AppCountClicksDirective,
     AppDetailsComponent,
     AppPlacesComponent,
-    AppContactComponent
+    AppContactComponent,
+    AppPlacesCreateComponent
   ],
   imports: [
     BrowserModule,

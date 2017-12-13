@@ -1,0 +1,50 @@
+.breadcrumb{
+  background: transparent;
+}
+
+.body-contact{
+  background: url('http://i.imgur.com/1TQx3.jpg[/IMG]');
+  background-size: 100% 100%;
+  min-height: 93vh;
+}
+
+.spacer{
+  padding-top: 100px;
+}
+
+.card-img{
+  height: 150px;
+  background: transparent;
+  border: 1px solid #fff  ;
+}
+
+.card{
+  border-color: transparent;
+  border: 0;
+  background: transparent;
+}
+
+.card-body{
+  background: #fff;
+}
+
+.card, .card-img{
+  border-radius: 0;
+}
+
+.card-img-overlay{
+  color: #fff !important;
+  height: 150px;
+}
+
+.card-title{
+  margin-top: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.pointer{
+  cursor: pointer;
+}
