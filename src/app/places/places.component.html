@@ -20,15 +20,16 @@
                   *ngFor="let place of places; let i = index"
                   [ngSwitch]="place.nearBy">
                     <a
-                    [routerLink]="['/details', place.id]"
+                    [routerLink]="['/details', place._id]"
                     [queryParams]="{action: 'view', referer: 'google'}">
 
                         <li class="list-group-item"
                           [ngStyle]="{color: (place.active) ? 'black' : 'gray'}">
-                            {{ place.nombre }} -
+                            {{ place.name }} -
                             <span *ngSwitchCase="1" [ngStyle]="{color: 'green'}"> Muy cercano </span>
                             <span *ngSwitchCase="2" [ngStyle]="{color: 'skyblue'}"> Cercano </span>
                             <span *ngSwitchCase="6" [ngStyle]="{color: 'red'}"> Lejano </span>
+                            <span *ngSwitchDefault [ngStyle]="{color: 'orange'}"> Muy lejano </span>
                           </li>
 
                     </a>

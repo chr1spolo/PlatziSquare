@@ -16,6 +16,18 @@ export class AppPlacesComponent {
   constructor (
     public placeService: AppPlacesService
   ) {
-    this.places = this.placeService.getPlaces();
+    // this.places = this.placeService.getPlaces();
+    placeService.getPlaces()
+                .valueChanges()
+                .subscribe( 
+                  place => {
+                    this.places = place; 
+                  }, 
+                  err => { console.log(err) } 
+                );
+  }
+
+  logging(td) {
+    console.log(td);
   }
 }

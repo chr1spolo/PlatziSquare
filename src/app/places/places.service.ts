@@ -43,7 +43,7 @@ export class AppPlacesService {
     ];
 
     public getPlaces() {
-        return this.places;
+        return this.afDB.list('places/');
     }
 
     public getPlace(id) {
@@ -51,7 +51,6 @@ export class AppPlacesService {
     }
 
     public savePlace(object) {
-      console.log(object);
-      console.log(this.afDB.database.ref('places/1').set(object));
+      this.afDB.database.ref(`places/${object._id}`).set(object);
     }
 }

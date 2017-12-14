@@ -12,6 +12,9 @@ export class AppPlacesCreateComponent {
     constructor(private placesService: AppPlacesService){}
 
     savePlace(){
-      this.placesService.savePlace(this.place);
+        this.place._id = Date.now();
+        this.placesService.savePlace(this.place);
+        alert('Lugar creado exitosamente');
+        this.place = {};
     }
 }
